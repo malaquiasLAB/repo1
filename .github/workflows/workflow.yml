@@ -1,8 +1,8 @@
 name: workflow.yml
 
 on:
-    repository_dispatch:
-      types: [custom_event]
+    workflow_dispatch:
+    
 
 jobs:
   echo:
