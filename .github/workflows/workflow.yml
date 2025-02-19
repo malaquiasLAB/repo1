@@ -2,10 +2,18 @@ name: workflow.yml
 
 on:
     workflow_dispatch:
-    
 
 jobs:
+  approval:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Request approval
+      uses: hmarr/auto-approve-action@v2
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
   echo:
+    needs: approval
     runs-on: ubuntu-latest
 
     steps:
