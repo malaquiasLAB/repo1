@@ -20,6 +20,6 @@ jobs:
     - name: Echo repository name
       if: env.AUTO_APPROVE == 'true'
       run: |
-         sleedp 180
+         sleep 180
          echo "Hello, this is the repository: $REPOSITORY_NAME"
          echo "Environment: ${{ github.event.inputs.environment }}"
