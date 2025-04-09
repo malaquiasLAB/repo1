@@ -21,3 +21,10 @@ jobs:
       if: env.AUTO_APPROVE == 'true'
       run: |
          echo "Hello, this is the repository: $REPOSITORY_NAME"
+         echo "hello OK" > hello.txt
+    
+    - name: Save hello artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: hello-artifact
+        path: hello.txt
