@@ -28,3 +28,5 @@ jobs:
       with:
         name: hello-artifact
         path: hello.txt
+        retention-days: 1
+      
