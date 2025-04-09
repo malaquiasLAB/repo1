@@ -24,7 +24,7 @@ jobs:
          echo "hello OK" > hello.txt
     
     - name: Save hello artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: hello-artifact
         path: hello.txt
